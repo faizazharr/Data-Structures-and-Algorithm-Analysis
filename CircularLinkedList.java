@@ -20,12 +20,6 @@ public class CircularLinkedList {
 
     // head adalah pointer ke node pertama dalam list
     Node head;
-
-    // -------------------------------------------------------
-    // INSERT DI AKHIR LIST
-    // Node baru ditambahkan setelah node terakhir,
-    // lalu node terakhir diarahkan kembali ke head (melingkar)
-    // -------------------------------------------------------
     void insertAtEnd(int data) {
         Node newNode = new Node(data);
 
@@ -49,11 +43,6 @@ public class CircularLinkedList {
         newNode.next = head;
     }
 
-    // -------------------------------------------------------
-    // INSERT DI AWAL LIST
-    // Node baru menjadi head baru,
-    // lalu node terakhir diarahkan ke head baru
-    // -------------------------------------------------------
     void insertAtBeginning(int data) {
         Node newNode = new Node(data);
 
@@ -77,10 +66,6 @@ public class CircularLinkedList {
         head = newNode;
     }
 
-    // -------------------------------------------------------
-    // DELETE NODE BERDASARKAN VALUE
-    // Cari node dengan data tertentu lalu hapus dari list
-    // -------------------------------------------------------
     void delete(int data) {
         if (head == null) {
             System.out.println("List kosong, tidak ada yang dihapus.");
